@@ -8,7 +8,7 @@ $content = 'MarkDown';
 $data['local'] = 1;
 
 
-if( strlen( $viewpass ) != 0 && trim($_REQUEST['vpass']) != $viewpass )
+if( strlen( $viewpass ) > 0 && trim($_REQUEST['vpass']) != $viewpass )
 {
 	$data['errno'] = '0';
 	$data['show'] = 0;
@@ -28,4 +28,3 @@ else
 }
 
 echo json_encode( $data );
-?>
