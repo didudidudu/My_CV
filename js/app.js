@@ -1,7 +1,7 @@
 var deerResume = angular.module('deerResume', ['ngRoute','wiz.markdown','ngNotify','angularLocalStorage']);
 
 //var baseurl = 'http://cvbox.sinaapp.com/'; // 使用SAE托管简历数据
-var baseurl = 'https://didudidudu.github.io/My_CV/data.php'; // 使用本地文件托管简历数据，本地模式下，不支持在线编辑
+var baseurl = 'https://didudidudu.github.io/My_CV/js/data.js'; // 使用本地文件托管简历数据，本地模式下，不支持在线编辑
 
 
 deerResume.config(['$routeProvider',
@@ -20,6 +20,9 @@ deerResume.config(['$routeProvider',
       });
   }]);
 
+function getInfo(data){
+  return data;
+}
 
 deerResume.controller('resumeCtrl', function ($scope,$http,storage) {
 
