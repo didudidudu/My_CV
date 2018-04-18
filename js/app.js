@@ -32,8 +32,8 @@ deerResume.controller('resumeCtrl', function ($scope,$http,storage) {
 
   function getInfo(){
 	var viewpass = '1234'; // 密码必须大于3位。留空则任何人可以访问
-	var title = '标题';
-	var subtitle = '子标题';
+	var title = '列表清单';
+	var subtitle = 'GuoJiaMing';
 	var content = `
 # 个人信息
 
