@@ -1,3 +1,4 @@
+getInfo();
 function getInfo(){
 	var viewpass = '1234'; // 密码必须大于3位。留空则任何人可以访问
 	var title = '标题';
@@ -15,6 +16,6 @@ function getInfo(){
 		data.content = content;
 	
 	
-	return data;
+	return 'getInfo('+data+')';
 	//console.log(data);
 }
