@@ -20,10 +20,6 @@ deerResume.config(['$routeProvider',
       });
   }]);
 
-function getInfo(data){
-  return data;
-}
-
 deerResume.controller('resumeCtrl', function ($scope,$http,storage) {
 
   storage.bind($scope,'vpass');
@@ -34,11 +30,12 @@ deerResume.controller('resumeCtrl', function ($scope,$http,storage) {
   else 
     url = baseurl+"?a=show&domain="+encodeURIComponent(window.location);
 
-  
-  $http.get(url).success(function( data ){
-      $scope.resume = data;
-      console.log(data);
-    }); 
+  $scope.resume = getInfo();
+  console.log($scope.resume);
+//   $http.get(url).success(function( data ){
+//       $scope.resume = data;
+//       console.log(data);
+//     }); 
 
   
   $scope.password = function( vpass )
