@@ -34,7 +34,7 @@ deerResume.controller('resumeCtrl', function ($scope,$http,storage) {
   
   $http.get(url).success(function( data ){
       $scope.resume = data;
-
+      console.log(data);
     }); 
 
   
